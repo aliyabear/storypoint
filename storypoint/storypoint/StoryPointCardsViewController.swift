@@ -9,21 +9,67 @@
 import UIKit
 
 class StoryPointCardsViewController: UICollectionViewController {
-
+    
+    let customCellIdentifier = "justAString"
+    // TODO: Make these values configurable via app.
+    var items = ["0", "1", "2", "3", "5", "8", "13", "20", "need coffee!"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        if let collectionView = collectionView {
-            collectionView.backgroundColor = UIColor.white
-        }
+        collectionView?.backgroundColor = UIColor.white
+        collectionView?.register(StoryPointCell.self, forCellWithReuseIdentifier: customCellIdentifier)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - UICollectionViewDataSource protocol
+    
+    // tell the collection view how many cells to make
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.items.count
     }
+    
+    // make a cell for each cell index path
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        // get a reference to our storyboard cell
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: customCellIdentifier, for: indexPath as IndexPath) as! StoryPointCell
+        
+        // Use the outlet in our custom class to get a reference to the UILabel in the cell
+        cell.titleLabel.text = self.items[indexPath.item]
+        cell.backgroundColor = UIColor.lightGray // make cell more visible in our example project
+        cell.layer.cornerRadius = 8
+        
+        return cell
+    }
+    
+    // MARK: - UICollectionViewDelegate protocol
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // handle tap events
+        print("You selected cell #\(indexPath.item)!")
+    }}
 
-
+// TODO: Move this into its own file
+class StoryPointCell : UICollectionViewCell {
+    let titleLabel: UILabel = {
+        let label = UILabel()//frame: CGRect(x:100, y: 30, width: UIScreen.main.bounds.width , height: 40))
+        //label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        label.lineBreakMode = .byWordWrapping
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addSubview(titleLabel)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }
-
