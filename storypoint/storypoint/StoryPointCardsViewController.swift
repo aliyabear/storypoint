@@ -53,13 +53,13 @@ class StoryPointCardsViewController: UICollectionViewController {
 
 // TODO: Move this into its own file
 class StoryPointCell : UICollectionViewCell {
-    let titleLabel: UILabel = {
-        let label = UILabel()//frame: CGRect(x:100, y: 30, width: UIScreen.main.bounds.width , height: 40))
-        //label.font = UIFont.systemFont(ofSize: 14)
+    var titleLabel: UILabel = {
+        // TODO figure out actual width of cell
+        let label = UILabel(frame: CGRect(x:0, y: 0, width: 40 , height: 40))
         label.textColor = UIColor.white
         label.textAlignment = .center
         label.lineBreakMode = .byWordWrapping
-        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .orange
         return label
     }()
     
