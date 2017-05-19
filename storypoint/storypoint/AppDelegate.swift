@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         // setup our initial ViewController
-        window?.rootViewController = ViewController()
+        window?.rootViewController = StoryPointCardsViewController(collectionViewLayout: UICollectionViewFlowLayout())
         return true
     }
 
