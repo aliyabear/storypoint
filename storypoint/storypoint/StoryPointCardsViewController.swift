@@ -36,7 +36,6 @@ class StoryPointCardsViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: customCellIdentifier, for: indexPath as IndexPath) as! StoryPointCell
         
-        // Use the outlet in our custom class to get a reference to the UILabel in the cell
         cell.titleLabel.text = self.items[indexPath.item]
         cell.backgroundColor = UIColor.lightGray // make cell more visible in our example project
         cell.layer.cornerRadius = 8
