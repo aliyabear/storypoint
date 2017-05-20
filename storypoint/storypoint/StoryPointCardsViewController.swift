@@ -8,18 +8,18 @@
 
 import UIKit
 
-class StoryPointCardsViewController: UICollectionViewController {
+class StoryPointCardsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let customCellIdentifier = "justAString"
     // TODO: Make these values configurable via app.
-    var items = ["0", "1", "2", "3", "5", "8", "13", "20", "need coffee!"]
+    var items = ["0", "1", "2", "3", "5", "8", "13", "20", "?"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         collectionView?.backgroundColor = UIColor.white
-        collectionView?.register(StoryPointCell.self, forCellWithReuseIdentifier: customCellIdentifier)
+        collectionView?.register(StoryPointCollectionViewCell.self, forCellWithReuseIdentifier: customCellIdentifier)
     }
     
     // MARK: - UICollectionViewDataSource protocol
@@ -33,12 +33,9 @@ class StoryPointCardsViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         // get a reference to our storyboard cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: customCellIdentifier, for: indexPath as IndexPath) as! StoryPointCollectionViewCell
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: customCellIdentifier, for: indexPath as IndexPath) as! StoryPointCell
-        
-        cell.titleLabel.text = self.items[indexPath.item]
-        cell.backgroundColor = UIColor.lightGray // make cell more visible in our example project
-        cell.layer.cornerRadius = 8
+        setThemeForCell(cell: cell, indexPath: indexPath)
         
         return cell
     }
@@ -48,27 +45,41 @@ class StoryPointCardsViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
-    }}
+    }
+    
+    // MARK: - UICollectionViewDelegateFlowLayout protocol
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top:10, left:10, bottom:10, right:10)
+    }
+    
+    // let's us set the actual size of the UICollectionViewCells within our UICollectionView
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return getCellSize()
+    }
+    
+    // MARK: - Cell Customization
+    
+    private func getCellSize() -> CGSize {
+        let screen = UIScreen.main.bounds
+        let screenWidth = screen.size.width
+        
+        let cellWidth = (screenWidth / 3.0) - 15;
+        let size = CGSize(width: cellWidth, height: cellWidth)
+        
+        return size
+    }
+    
+    private func setThemeForCell(cell: StoryPointCollectionViewCell?, indexPath: IndexPath) {
+        guard let cell = cell else {
+            return
+        }
+        
+        cell.titleLabel.text = self.items[indexPath.item]
+        cell.titleLabel.font = cell.titleLabel.font.withSize(24)
+        cell.titleLabel.frame.size = getCellSize()
+        cell.layer.cornerRadius = 4
+        cell.backgroundColor = .orange
+    }
 
-// TODO: Move this into its own file
-class StoryPointCell : UICollectionViewCell {
-    var titleLabel: UILabel = {
-        // TODO figure out actual width of cell
-        let label = UILabel(frame: CGRect(x:0, y: 0, width: 40 , height: 40))
-        label.textColor = UIColor.white
-        label.textAlignment = .center
-        label.lineBreakMode = .byWordWrapping
-        label.backgroundColor = .orange
-        return label
-    }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addSubview(titleLabel)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
 }

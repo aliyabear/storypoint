@@ -16,7 +16,6 @@ class StoryPointCollectionViewCell : UICollectionViewCell {
         label.textColor = UIColor.white
         label.textAlignment = .center
         label.lineBreakMode = .byWordWrapping
-        //label.backgroundColor = .orange
         label.layoutMargins = UIEdgeInsets(top:4, left:4, bottom:4, right:4)
         return label
     }()
