@@ -11,7 +11,6 @@ import UIKit
 class StoryPointCollectionViewCell : UICollectionViewCell {
     
     var titleLabel: UILabel = {
-        // TODO figure out actual width of cell
         let label = UILabel()
         label.textColor = UIColor.white
         label.textAlignment = .center
