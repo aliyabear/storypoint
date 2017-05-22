@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		4D72492A1ED0B240003AA5C5 /* StoryPointCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7249291ED0B240003AA5C5 /* StoryPointCollectionViewCell.swift */; };
+		4D72492C1ED27B87003AA5C5 /* StoryPointCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72492B1ED27B87003AA5C5 /* StoryPointCard.swift */; };
+		4D72492F1ED27DB3003AA5C5 /* CardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72492E1ED27DB3003AA5C5 /* CardProtocol.swift */; };
+		4D7249311ED27E94003AA5C5 /* ThumbnailCardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7249301ED27E94003AA5C5 /* ThumbnailCardCollectionViewController.swift */; };
+		4D7249371ED284DC003AA5C5 /* FullScreenCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7249361ED284DC003AA5C5 /* FullScreenCollectionViewController.swift */; };
+		4D72493A1ED28939003AA5C5 /* CollectionViewCellThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7249391ED28939003AA5C5 /* CollectionViewCellThemeHelper.swift */; };
+		4D72493C1ED28D55003AA5C5 /* SelectedStoryPointCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72493B1ED28D55003AA5C5 /* SelectedStoryPointCard.swift */; };
 		4DC955DF1ECE97F4001DCAA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC955DE1ECE97F4001DCAA8 /* AppDelegate.swift */; };
-		4DC955E11ECE97F4001DCAA8 /* StoryPointCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC955E01ECE97F4001DCAA8 /* StoryPointCardsViewController.swift */; };
+		4DC955E11ECE97F4001DCAA8 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC955E01ECE97F4001DCAA8 /* CardsViewController.swift */; };
 		4DC955E61ECE97F4001DCAA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC955E51ECE97F4001DCAA8 /* Assets.xcassets */; };
 		4DC955E91ECE97F4001DCAA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC955E71ECE97F4001DCAA8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D7249291ED0B240003AA5C5 /* StoryPointCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryPointCollectionViewCell.swift; sourceTree = "<group>"; };
+		4D72492B1ED27B87003AA5C5 /* StoryPointCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryPointCard.swift; sourceTree = "<group>"; };
+		4D72492E1ED27DB3003AA5C5 /* CardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardProtocol.swift; sourceTree = "<group>"; };
+		4D7249301ED27E94003AA5C5 /* ThumbnailCardCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailCardCollectionViewController.swift; sourceTree = "<group>"; };
+		4D7249361ED284DC003AA5C5 /* FullScreenCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenCollectionViewController.swift; sourceTree = "<group>"; };
+		4D7249391ED28939003AA5C5 /* CollectionViewCellThemeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellThemeHelper.swift; sourceTree = "<group>"; };
+		4D72493B1ED28D55003AA5C5 /* SelectedStoryPointCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedStoryPointCard.swift; sourceTree = "<group>"; };
 		4DC955DB1ECE97F4001DCAA8 /* storypoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = storypoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC955DE1ECE97F4001DCAA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DC955E01ECE97F4001DCAA8 /* StoryPointCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPointCardsViewController.swift; sourceTree = "<group>"; };
+		4DC955E01ECE97F4001DCAA8 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		4DC955E51ECE97F4001DCAA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DC955E81ECE97F4001DCAA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DC955EA1ECE97F4001DCAA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,10 +47,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D72492D1ED27D87003AA5C5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4D72492E1ED27DB3003AA5C5 /* CardProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		4D7249321ED2844B003AA5C5 /* CollectionViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D7249301ED27E94003AA5C5 /* ThumbnailCardCollectionViewController.swift */,
+				4DC955E01ECE97F4001DCAA8 /* CardsViewController.swift */,
+				4D7249361ED284DC003AA5C5 /* FullScreenCollectionViewController.swift */,
+			);
+			name = CollectionViewControllers;
+			sourceTree = "<group>";
+		};
+		4D7249331ED28466003AA5C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D7249341ED2847D003AA5C5 /* CollectionViewCells */,
+				4D7249321ED2844B003AA5C5 /* CollectionViewControllers */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4D7249341ED2847D003AA5C5 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4D7249291ED0B240003AA5C5 /* StoryPointCollectionViewCell.swift */,
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		4D7249351ED2849F003AA5C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D72492B1ED27B87003AA5C5 /* StoryPointCard.swift */,
+				4D72493B1ED28D55003AA5C5 /* SelectedStoryPointCard.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4D7249381ED2890F003AA5C5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4D7249391ED28939003AA5C5 /* CollectionViewCellThemeHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		4DC955D21ECE97F4001DCAA8 = {
 			isa = PBXGroup;
 			children = (
-				4DC955DD1ECE97F4001DCAA8 /* storypoint */,
+				4DC955DD1ECE97F4001DCAA8 /* StoryPoint */,
 				4DC955DC1ECE97F4001DCAA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,16 +115,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4DC955DD1ECE97F4001DCAA8 /* storypoint */ = {
+		4DC955DD1ECE97F4001DCAA8 /* StoryPoint */ = {
 			isa = PBXGroup;
 			children = (
+				4D7249381ED2890F003AA5C5 /* Helpers */,
+				4D7249351ED2849F003AA5C5 /* Model */,
+				4D7249331ED28466003AA5C5 /* View */,
+				4D72492D1ED27D87003AA5C5 /* Protocols */,
 				4DC955DE1ECE97F4001DCAA8 /* AppDelegate.swift */,
-				4DC955E01ECE97F4001DCAA8 /* StoryPointCardsViewController.swift */,
 				4DC955E51ECE97F4001DCAA8 /* Assets.xcassets */,
 				4DC955E71ECE97F4001DCAA8 /* LaunchScreen.storyboard */,
 				4DC955EA1ECE97F4001DCAA8 /* Info.plist */,
-				4D7249291ED0B240003AA5C5 /* StoryPointCollectionViewCell.swift */,
 			);
+			name = StoryPoint;
 			path = storypoint;
 			sourceTree = "<group>";
 		};
@@ -136,9 +203,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D72493A1ED28939003AA5C5 /* CollectionViewCellThemeHelper.swift in Sources */,
 				4D72492A1ED0B240003AA5C5 /* StoryPointCollectionViewCell.swift in Sources */,
-				4DC955E11ECE97F4001DCAA8 /* StoryPointCardsViewController.swift in Sources */,
+				4DC955E11ECE97F4001DCAA8 /* CardsViewController.swift in Sources */,
+				4D72493C1ED28D55003AA5C5 /* SelectedStoryPointCard.swift in Sources */,
 				4DC955DF1ECE97F4001DCAA8 /* AppDelegate.swift in Sources */,
+				4D72492C1ED27B87003AA5C5 /* StoryPointCard.swift in Sources */,
+				4D72492F1ED27DB3003AA5C5 /* CardProtocol.swift in Sources */,
+				4D7249311ED27E94003AA5C5 /* ThumbnailCardCollectionViewController.swift in Sources */,
+				4D7249371ED284DC003AA5C5 /* FullScreenCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
