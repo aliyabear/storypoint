@@ -8,10 +8,9 @@
 
 import UIKit
 
-class StoryPointCard : NSObject {
-    
+class StoryPointCard : NSObject, StoryPointCardProtocol {
     var title: String = ""
-    var backgroundColour: UIColor = .clear
+    var backgroundColour: UIColor = .orange
     var foregroundColour: UIColor = .white
     
     init(title: String?, background: UIColor?, foreground: UIColor?) {
@@ -21,6 +20,16 @@ class StoryPointCard : NSObject {
         
         if let backgroundColour = background {
             self.backgroundColour = backgroundColour
+        }
+        
+        if let foregroundColour = foreground {
+            self.foregroundColour = foregroundColour
+        }
+    }
+    
+    init(title: String?, foreground: UIColor?) {
+        if let title = title {
+            self.title = title
         }
         
         if let foregroundColour = foreground {

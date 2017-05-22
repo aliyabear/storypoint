@@ -11,7 +11,7 @@ import UIKit
 class CollectionViewCellThemeHelper {
     
     // Sets the theme of a StoryPointCollectionViewCell
-    static func setTheme(cell: StoryPointCollectionViewCell?, item: StoryPointCard?) {
+    static func setTheme(cell: StoryPointCollectionViewCell?, item: StoryPointCardProtocol?) {
         guard let cell = cell else {
             return
         }
@@ -20,6 +20,24 @@ class CollectionViewCellThemeHelper {
             return
         }
         
+        setBasicTheme(cell: cell, item: item)
+    }
+    
+    static func setThemeForHiddenCard(cell: StoryPointCollectionViewCell?, item: SelectedStoryPointCard?) {
+        guard let cell = cell else {
+            return
+        }
+        
+        if let image = UIImage(named:  "dash.png") {
+            let imageView = UIImageView(frame: CGRect(origin: CGPoint(x:0, y:0), size: CGSize(width: cell.frame.width, height: cell.frame.height)))
+        
+            imageView.image = image
+            imageView.contentMode = UIViewContentMode.scaleAspectFit
+            cell.addSubview(imageView);
+        }
+    }
+    
+    private static func setBasicTheme(cell: StoryPointCollectionViewCell, item: StoryPointCardProtocol) {
         cell.titleLabel.frame.size = CGSize(width: cell.frame.width, height: cell.frame.height)
         cell.titleLabel.text = item.title
         cell.titleLabel.textColor = item.foregroundColour
@@ -28,7 +46,6 @@ class CollectionViewCellThemeHelper {
         
         if(item is SelectedStoryPointCard) {
             cell.titleLabel.font =  UIFont.systemFont(ofSize: (item as! SelectedStoryPointCard).fontSize)
-            //cell.titleLabel.isHidden = true;
         }
     }
     

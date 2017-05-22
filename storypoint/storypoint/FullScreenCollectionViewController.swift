@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FullScreenCollectionViewController : CardsViewController, CardProtocol {
+class FullScreenCollectionViewController : CardsViewController, CardCollectionViewProtocol {
     
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -23,25 +23,16 @@ class FullScreenCollectionViewController : CardsViewController, CardProtocol {
         fatalError()
     }
     
-    // MARK: - UICollectionViewDelegate protocol
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let fullScreenVC = FullScreenCollectionViewController()
-        
-        let item = items[indexPath.item]
-        item.foregroundColour = .white
-
-        fullScreenVC.items = [item]
-
-        navigationController?.pushViewController(fullScreenVC, animated: true)
-    }
-        
     // MARK: - StoryPointCardProtocol
     
     func getCardSize() -> CGSize {
         let screen = UIScreen.main.bounds
-        let size = CGSize(width: screen.size.width, height: screen.size.height)
+        let size = CGSize(width: screen.size.width, height: screen.size.height - 40)
         
         return size
+    }
+    
+    func setTheme(cell: StoryPointCollectionViewCell?, item: StoryPointCardProtocol?) {
+        CollectionViewCellThemeHelper.setThemeForHiddenCard(cell: cell, item: item as? SelectedStoryPointCard)
     }
 }

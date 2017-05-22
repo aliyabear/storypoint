@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThumbnailCardCollectionViewController : CardsViewController, CardProtocol {
+class ThumbnailCardCollectionViewController : CardsViewController, CardCollectionViewProtocol {
     
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -24,17 +24,17 @@ class ThumbnailCardCollectionViewController : CardsViewController, CardProtocol 
         
         useLayoutToLayoutNavigationTransitions = false
         
-        items = [StoryPointCard(title: "0",   background: .orange, foreground: .white),
-                 StoryPointCard(title: "1",   background: .blue, foreground: .white),
-                 StoryPointCard(title: "2",   background: .lightGray, foreground: .white),
-                 StoryPointCard(title: "3",   background: .black, foreground: .white),
-                 StoryPointCard(title: "5",   background: .red, foreground: .white),
-                 StoryPointCard(title: "8",   background: .purple, foreground: .white),
-                 StoryPointCard(title: "13",  background: .orange, foreground: .white),
-                 StoryPointCard(title: "20",  background: .brown, foreground: .white),
-                 StoryPointCard(title: "40",  background: .green, foreground: .white),
-                 StoryPointCard(title: "100", background: .yellow, foreground: .white),
-                 StoryPointCard(title: "?",   background: .gray, foreground: .white)]
+        items = [StoryPointCard(title: "0", background: .magenta, foreground: .white),
+                 StoryPointCard(title: "1", background: .blue, foreground: .white),
+                 StoryPointCard(title: "2", background: .gray, foreground: .white),
+                 StoryPointCard(title: "3", background: .orange, foreground: .white),
+                 StoryPointCard(title: "5", background: .purple, foreground: .white),
+                 StoryPointCard(title: "8", background: .magenta, foreground: .white),
+                 StoryPointCard(title: "13", background: .blue, foreground: .white),
+                 StoryPointCard(title: "20", background: .gray, foreground: .white),
+                 StoryPointCard(title: "40", background: .orange, foreground: .white),
+                 StoryPointCard(title: "100", background: .purple, foreground: .white),
+                 StoryPointCard(title: "?", background: .magenta, foreground: .white)]
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,11 +42,11 @@ class ThumbnailCardCollectionViewController : CardsViewController, CardProtocol 
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let fullScreenVC = FullScreenCollectionViewController()
+        let fullScreenVC = HiddenFullScreenCollectionViewController()
         
         let item = items[indexPath.item]
         
-        let selectedItem = SelectedStoryPointCard(title: item.title, background: item.backgroundColour, foreground: .clear)
+        let selectedItem = SelectedStoryPointCard(title: item.title, background: item.backgroundColour, foreground: item.foregroundColour)
         
         fullScreenVC.items = [selectedItem]
         
