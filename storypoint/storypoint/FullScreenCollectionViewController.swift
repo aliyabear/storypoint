@@ -29,3 +29,19 @@ class FullScreenCollectionViewController : CardsViewController, CardProtocol {
         let fullScreenVC = FullScreenCollectionViewController()
         
         let item = items[indexPath.item]
+        item.foregroundColour = .white
+
+        fullScreenVC.items = [item]
+
+        navigationController?.pushViewController(fullScreenVC, animated: true)
+    }
+        
+    // MARK: - StoryPointCardProtocol
+    
+    func getCardSize() -> CGSize {
+        let screen = UIScreen.main.bounds
+        let size = CGSize(width: screen.size.width, height: screen.size.height)
+        
+        return size
+    }
+}
