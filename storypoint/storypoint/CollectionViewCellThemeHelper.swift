@@ -54,7 +54,7 @@ extension UIImage {
     static func randomPony() -> UIImage? {
         let ponies = ["apple.jpg", "pinkie.jpg", "pinkie2.png", "rarity.png", "rarity.jpg", "applejack.png", "dash.png", "dash2.png", "dash3.png", "maud.png", "scootaloo.png", "twilight.png", "twilight2.png"]
         
-        let index = Int(arc4random()) % ponies.count
+        let index = Int(arc4random_uniform(UInt32(ponies.count)))
     
         return UIImage(named: ponies[index])
     }
