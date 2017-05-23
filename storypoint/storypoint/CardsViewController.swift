@@ -11,7 +11,7 @@ import UIKit
 class CardsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var customCellIdentifier = ""    
-    var items = [StoryPointCard]()
+    var items = [StoryPointCardProtocol]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
