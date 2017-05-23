@@ -17,6 +17,18 @@
 		4D7249491ED29FC2003AA5C5 /* StoryPointCardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7249481ED29FC2003AA5C5 /* StoryPointCardProtocol.swift */; };
 		4D72494B1ED2A2B7003AA5C5 /* HiddenFullScreenCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72494A1ED2A2B7003AA5C5 /* HiddenFullScreenCollectionViewController.swift */; };
 		4D72494D1ED2AFE1003AA5C5 /* dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D72494C1ED2AFE1003AA5C5 /* dash.png */; };
+		4DC36DD91ED3C14900834308 /* apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36DD41ED3C14900834308 /* apple.jpg */; };
+		4DC36DDA1ED3C14900834308 /* pinkie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36DD51ED3C14900834308 /* pinkie.jpg */; };
+		4DC36DDB1ED3C14900834308 /* rarity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36DD61ED3C14900834308 /* rarity.jpg */; };
+		4DC36DDC1ED3C14900834308 /* rarity.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36DD71ED3C14900834308 /* rarity.png */; };
+		4DC36DDD1ED3C14900834308 /* twilight.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36DD81ED3C14900834308 /* twilight.png */; };
+		4DC36DE41ED3C28600834308 /* applejack.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36DDE1ED3C28600834308 /* applejack.png */; };
+		4DC36DE51ED3C28600834308 /* dash2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36DDF1ED3C28600834308 /* dash2.png */; };
+		4DC36DE61ED3C28600834308 /* dash3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36DE01ED3C28600834308 /* dash3.png */; };
+		4DC36DE71ED3C28600834308 /* maud.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36DE11ED3C28600834308 /* maud.png */; };
+		4DC36DE81ED3C28600834308 /* pinkie2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36DE21ED3C28600834308 /* pinkie2.png */; };
+		4DC36DE91ED3C28600834308 /* scootaloo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36DE31ED3C28600834308 /* scootaloo.png */; };
+		4DC36DEB1ED3C28D00834308 /* twilight2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36DEA1ED3C28D00834308 /* twilight2.png */; };
 		4DC955DF1ECE97F4001DCAA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC955DE1ECE97F4001DCAA8 /* AppDelegate.swift */; };
 		4DC955E11ECE97F4001DCAA8 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC955E01ECE97F4001DCAA8 /* CardsViewController.swift */; };
 		4DC955E61ECE97F4001DCAA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC955E51ECE97F4001DCAA8 /* Assets.xcassets */; };
@@ -34,6 +46,18 @@
 		4D7249481ED29FC2003AA5C5 /* StoryPointCardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryPointCardProtocol.swift; sourceTree = "<group>"; };
 		4D72494A1ED2A2B7003AA5C5 /* HiddenFullScreenCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiddenFullScreenCollectionViewController.swift; sourceTree = "<group>"; };
 		4D72494C1ED2AFE1003AA5C5 /* dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash.png; sourceTree = "<group>"; };
+		4DC36DD41ED3C14900834308 /* apple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apple.jpg; sourceTree = "<group>"; };
+		4DC36DD51ED3C14900834308 /* pinkie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pinkie.jpg; sourceTree = "<group>"; };
+		4DC36DD61ED3C14900834308 /* rarity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rarity.jpg; sourceTree = "<group>"; };
+		4DC36DD71ED3C14900834308 /* rarity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rarity.png; sourceTree = "<group>"; };
+		4DC36DD81ED3C14900834308 /* twilight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twilight.png; sourceTree = "<group>"; };
+		4DC36DDE1ED3C28600834308 /* applejack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applejack.png; sourceTree = "<group>"; };
+		4DC36DDF1ED3C28600834308 /* dash2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash2.png; sourceTree = "<group>"; };
+		4DC36DE01ED3C28600834308 /* dash3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash3.png; sourceTree = "<group>"; };
+		4DC36DE11ED3C28600834308 /* maud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maud.png; sourceTree = "<group>"; };
+		4DC36DE21ED3C28600834308 /* pinkie2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinkie2.png; sourceTree = "<group>"; };
+		4DC36DE31ED3C28600834308 /* scootaloo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scootaloo.png; sourceTree = "<group>"; };
+		4DC36DEA1ED3C28D00834308 /* twilight2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twilight2.png; sourceTree = "<group>"; };
 		4DC955DB1ECE97F4001DCAA8 /* storypoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = storypoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC955DE1ECE97F4001DCAA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DC955E01ECE97F4001DCAA8 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +134,18 @@
 		4D72493D1ED29A51003AA5C5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4DC36DD41ED3C14900834308 /* apple.jpg */,
+				4DC36DD51ED3C14900834308 /* pinkie.jpg */,
+				4DC36DD61ED3C14900834308 /* rarity.jpg */,
+				4DC36DD71ED3C14900834308 /* rarity.png */,
+				4DC36DDE1ED3C28600834308 /* applejack.png */,
+				4DC36DDF1ED3C28600834308 /* dash2.png */,
+				4DC36DE01ED3C28600834308 /* dash3.png */,
+				4DC36DE11ED3C28600834308 /* maud.png */,
+				4DC36DE21ED3C28600834308 /* pinkie2.png */,
+				4DC36DE31ED3C28600834308 /* scootaloo.png */,
+				4DC36DEA1ED3C28D00834308 /* twilight2.png */,
+				4DC36DD81ED3C14900834308 /* twilight.png */,
 				4D72494C1ED2AFE1003AA5C5 /* dash.png */,
 			);
 			name = Resources;
@@ -175,7 +211,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Aliya Hassam";
 				TargetAttributes = {
 					4DC955DA1ECE97F4001DCAA8 = {
@@ -208,10 +244,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC36DE81ED3C28600834308 /* pinkie2.png in Resources */,
+				4DC36DE91ED3C28600834308 /* scootaloo.png in Resources */,
+				4DC36DDB1ED3C14900834308 /* rarity.jpg in Resources */,
+				4DC36DEB1ED3C28D00834308 /* twilight2.png in Resources */,
 				4D72494D1ED2AFE1003AA5C5 /* dash.png in Resources */,
+				4DC36DE71ED3C28600834308 /* maud.png in Resources */,
+				4DC36DE51ED3C28600834308 /* dash2.png in Resources */,
 				4DC955E91ECE97F4001DCAA8 /* LaunchScreen.storyboard in Resources */,
+				4DC36DDD1ED3C14900834308 /* twilight.png in Resources */,
+				4DC36DDC1ED3C14900834308 /* rarity.png in Resources */,
+				4DC36DE41ED3C28600834308 /* applejack.png in Resources */,
+				4DC36DD91ED3C14900834308 /* apple.jpg in Resources */,
+				4DC36DE61ED3C28600834308 /* dash3.png in Resources */,
 				4DC955E61ECE97F4001DCAA8 /* Assets.xcassets in Resources */,
-
+				4DC36DDA1ED3C14900834308 /* pinkie.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +315,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -318,6 +366,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
