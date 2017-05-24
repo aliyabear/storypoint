@@ -28,7 +28,7 @@ class CollectionViewCellThemeHelper {
             return
         }
         
-        if let image = UIImage(named:  "dash.png") {
+        if let image = UIImage.randomPony() {
             let imageView = UIImageView(frame: CGRect(origin: CGPoint(x:0, y:0), size: CGSize(width: cell.frame.width, height: cell.frame.height)))
         
             imageView.image = image
@@ -48,5 +48,14 @@ class CollectionViewCellThemeHelper {
             cell.titleLabel.font =  UIFont.systemFont(ofSize: (item as! SelectedStoryPointCard).fontSize)
         }
     }
+}
+
+extension UIImage {
+    static func randomPony() -> UIImage? {
+        let ponies = ["apple.jpg", "pinkie.jpg", "pinkie2.png", "rarity.png", "rarity.jpg", "applejack.png", "dash.png", "dash2.png", "dash3.png", "maud.png", "scootaloo.png", "twilight.png", "twilight2.png"]
+        
+        let index = Int(arc4random_uniform(UInt32(ponies.count)))
     
+        return UIImage(named: ponies[index])
+    }
 }
